@@ -360,3 +360,9 @@ section {
 		font-size: 1.75rem;
 	}
 }
+
+.chat-submit-btn {
+	border: none;
+	background-color: transparent;
+	cursor: pointer;
+}

@@ -73,7 +73,9 @@ export default function AppChat() {
 						className="chat-input"
 						required
 					/>
-					<img src="/send-btn.svg" alt="send icon" />
+					<button type="submit" className="chat-submit-btn">
+						<img src="/send-btn.svg" alt="send icon" />
+					</button>
 				</form>
 				<div className="chat-flags">
 					<img

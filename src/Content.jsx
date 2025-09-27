@@ -83,6 +83,7 @@ export default function Content() {
 									type="radio"
 									name="language"
 									value="french"
+									id="radioInput"
 									className="radioInput"
 									required
 								/>
@@ -90,11 +91,12 @@ export default function Content() {
 								<img src="/fr-flag.svg" alt="french flag" />
 							</label>
 
-							<label htmlFor="radioInput" className="label-language">
+							<label htmlFor="radioInput2" className="label-language">
 								<input
 									type="radio"
 									name="language"
 									value="spanish"
+									id="radioInput2"
 									className="radioInput"
 									required
 								/>
@@ -102,11 +104,12 @@ export default function Content() {
 								<img src="/sp-flag.svg" alt="spanish flag" />
 							</label>
 
-							<label htmlFor="radioInput" className="label-language">
+							<label htmlFor="radioInput3" className="label-language">
 								<input
 									type="radio"
 									name="language"
 									value="japanese"
+									id="radioInput3"
 									className="radioInput"
 									required
 								/>
