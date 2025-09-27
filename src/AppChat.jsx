@@ -21,37 +21,28 @@ export default function AppChat() {
 			{ text: userMessage, sender: "user" },
 		]);
 
-		const openai = new OpenAI({
-			baseURL: "https://openrouter.ai/api/v1",
-			apiKey:
-				"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",
-			dangerouslyAllowBrowser: true,
-		});
+		fetch("/.netlify/functions/translate", {
+			method: "POST",
+			headers: {
+				"Content-Type": "application/json",
+			},
+			body: JSON.stringify({
+				text: userMessage,
+				language: selectedLang,
+			}),
+		})
+			.then((res) => res.json())
+			.then((data) => {
+				console.log(
+					`Translate the following text into ${selectedLang}: ${userMessage}`
+				);
 
-		async function main() {
-			const completion = await openai.chat.completions
-				.create({
-					model: "x-ai/grok-4-fast:free",
-					messages: [
-						{
-							role: "assistant",
-							content:
-								"You are a professional translator. Translate the text provided by the user into the target language selected by the application. Maintain the original meaning and tone. Do not add explanations or comments. Output only the translated text without quotes or extra formatting",
-						},
-						{
-							role: "user",
-							content: `The user said: ${userMessage}, translate it into ${selectedLang}.`,
-						},
-					],
-				})
-				.catch((err) => console.log(err));
-
-			setMessages((prevMessages) => [
-				...prevMessages,
-				{ text: completion.choices[0].message.content, sender: "chat" },
-			]);
-		}
-		main();
+				setMessages((prevMessages) => [
+					...prevMessages,
+					{ text: data.translatedText, sender: "chat" },
+				]);
+			})
+			.catch((err) => console.log(err));
 	}
 
 	return (
