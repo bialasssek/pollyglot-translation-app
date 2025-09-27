@@ -1,0 +1,362 @@
+*,
+body,
+html {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+body {
+	font-family: "Pop../publicpins", sans-serif;
+}
+
+header {
+	background-color: #0d182e;
+
+	background-image: url(/world-map.png);
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-position: right;
+}
+.header-container {
+	padding: 2.5em;
+	display: flex;
+	gap: 2em;
+	align-items: center;
+	max-width: 1200px;
+	margin: 0 auto;
+	justify-content: center;
+}
+
+.logo-img {
+	width: 35%;
+	max-width: 300px;
+}
+
+.header-title {
+	font-family: "Big Shoulders", "Poppins", sans-serif;
+	color: #32cd32;
+	line-height: 1.5;
+	font-size: 2.7rem;
+	font-weight: 800;
+}
+
+.header-subtitle {
+	font-size: 0.75rem;
+	color: #fff;
+	line-height: 1.5;
+	font-weight: 500;
+	margin-top: -2%;
+}
+
+main {
+	padding: 1.875em 0.8125em;
+}
+
+section {
+	border: 4px solid #252f42;
+	border-radius: 15px;
+	padding: 1.5em;
+	max-width: 800px;
+	margin: 0 auto;
+}
+.translate-header:first-of-type {
+	margin-top: 0.5em;
+}
+
+.translate-header {
+	font-size: 1.25rem;
+	color: #035a9d;
+	line-height: 1.5;
+	font-weight: 700;
+	display: block;
+	text-align: center;
+}
+
+.translate-input {
+	background-color: #eff0f4;
+	border-radius: 8px;
+	padding: 0.6em;
+	width: 100%;
+	margin-top: 1.25em;
+	padding-bottom: 6em;
+}
+
+.translate-input::placeholder,
+.translate-input,
+.label-language p,
+.translate-btn,
+.translate-input p {
+	color: #333333;
+	line-height: 1.5;
+	font-size: 1.25rem;
+	font-weight: 600;
+	letter-spacing: -5%;
+	border: none;
+}
+#radioInput {
+	accent-color: #008bf7;
+	width: 16px;
+	height: 16px;
+	border: 1px solid #bcbcbc;
+}
+
+.label-language {
+	display: flex;
+	align-items: center;
+	gap: 0.75em;
+	margin-bottom: 0.15em;
+	justify-content: center;
+}
+.label-language img {
+	width: 30px;
+}
+
+.translate-header-lang {
+	margin-top: 1.3em;
+	margin-bottom: 1.3em;
+}
+.translate-btn {
+	font-family: "Poppins", sans-serif;
+	display: block;
+	margin: 1.5em auto 1em;
+	padding: 0.6em;
+	width: 100%;
+	max-width: 300px;
+	font-size: 1.25rem;
+	font-weight: 600;
+	color: #fff;
+	background-color: #035a9d;
+	border: none;
+	border-radius: 8px;
+	cursor: pointer;
+	transition: all 0.3s ease;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.translate-btn:hover {
+	background-color: #0278c9; /* Lighter shade for hover */
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Stronger shadow on hover */
+	transform: translateY(-2px); /* Slight lift effect */
+}
+
+.translate-btn:active {
+	background-color: #014c82; /* Darker shade for active */
+	box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2); /* Reduced shadow when pressed */
+	transform: translateY(0); /* Reset lift effect */
+}
+@media (min-width: 750px) {
+	.header-title {
+		font-size: 4.5rem;
+	}
+	.header-subtitle {
+		font-size: 1rem;
+	}
+
+	.translate-input {
+		padding-bottom: 8em;
+	}
+	.header-container {
+		gap: 4em;
+		justify-content: start;
+	}
+}
+
+@media (min-width: 1080px) {
+	.header-title {
+		font-size: 6rem;
+	}
+	.header-subtitle {
+		font-size: 1.5rem;
+	}
+	.translate-input {
+		padding-bottom: 10em;
+	}
+}
+
+/* Navigation Styles */
+.nav-container {
+	background-color: #0d182e; /* Matches header background */
+	padding: 1em 2.5em;
+	display: flex;
+	justify-content: center;
+	border-bottom: 1px solid #252f42; /* Subtle border to separate from main content */
+}
+
+.nav-links {
+	max-width: 1200px; /* Matches .header-container max-width */
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 1.5em; /* Spacing between links and divider */
+}
+
+.nav-link {
+	font-family: "Poppins", sans-serif;
+	font-size: 1.25rem;
+	font-weight: 600;
+	color: #fff; /* White text to match header subtitle */
+	text-decoration: none; /* Remove default underline */
+	padding: 0.5em 1em;
+	border-radius: 8px; /* Matches .translate-btn */
+	transition: all 0.3s ease; /* Smooth hover effect */
+}
+
+.nav-link:hover {
+	background-color: #035a9d; /* Matches .translate-btn background */
+	color: #fff;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Matches .translate-btn shadow */
+	transform: translateY(-2px); /* Matches .translate-btn hover lift */
+}
+
+.nav-link:active {
+	background-color: #014c82; /* Matches .translate-btn active state */
+	transform: translateY(0); /* Reset lift */
+	box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2); /* Matches .translate-btn active shadow */
+}
+
+.nav-divider {
+	font-family: "Poppins", sans-serif;
+	font-size: 1.25rem;
+	font-weight: 600;
+	color: #fff; /* Matches .nav-link color */
+	opacity: 0.6; /* Slightly faded for visual hierarchy */
+}
+
+/* /chat  */
+
+.chat {
+	padding: 2.75em 1.5em 1em 1.5em;
+	max-width: 600px;
+}
+
+.conversation {
+	display: flex;
+	flex-direction: column;
+	gap: 1.75em;
+	min-height: 20vh; /* adjust as needed for responsiveness */
+	max-height: 50vh;
+	overflow-y: auto;
+	margin-bottom: 1.5em;
+	padding-right: 1em; /* space for scrollbar */
+	scrollbar-width: thin; /* Firefox */
+	scrollbar-color: #035a9d #f0f0f0; /* thumb and track for Firefox */
+}
+/* Nice scrollbar for Webkit browsers */
+.conversation::-webkit-scrollbar {
+	width: 8px;
+}
+
+.conversation::-webkit-scrollbar-track {
+	background: #f0f0f0;
+	border-radius: 8px;
+}
+
+.conversation::-webkit-scrollbar-thumb {
+	background-color: #035a9d;
+	border-radius: 8px;
+	border: 2px solid #f0f0f0;
+}
+.message {
+	font-size: 1.25rem;
+	font-weight: 600;
+	line-height: 1.3;
+	width: 100%;
+	padding: 0.5em 1em 1.2em 1em;
+	border-radius: 10px;
+}
+
+.chat-message {
+	background-color: #035a9d;
+	color: #fff;
+	border-top-right-radius: 1px;
+}
+.user-message {
+	background-color: #65da65;
+	color: #333333;
+	border-top-left-radius: 1px;
+}
+
+.chat-form {
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+	padding: 1.25em 0.75em;
+	border: 1.5px solid #586e88;
+	background-color: #f5f5f5;
+	border-radius: 10px;
+	justify-content: space-between;
+	margin-bottom: 1em;
+}
+
+.chat-input {
+	width: 80%;
+	border: none;
+	background-color: #f5f5f5;
+	font-size: 1.25rem;
+	font-weight: 600;
+	line-height: 1.3;
+	outline: none;
+	color: #333333;
+}
+.chat-flags {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 2.5em;
+}
+.flag {
+	width: 14%;
+	max-width: 50px;
+	border: none;
+	outline: none;
+	cursor: pointer;
+	border-radius: 4px; /* Subtle rounded corners */
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+	transition: all 0.3s ease; /* Smooth transition for hover/active */
+}
+
+.flag:hover {
+	transform: translateY(-2px); /* Slight lift on hover */
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); /* Enhanced shadow */
+}
+
+.flag:active {
+	transform: translateY(0); /* Reset lift on click */
+	box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1); /* Reduced shadow for pressed effect */
+}
+.selected {
+	outline: 3px solid #035a9d;
+	outline-offset: -3px;
+}
+
+/* Responsive Adjustments */
+@media (min-width: 750px) {
+	.nav-container {
+		padding: 1.5em 2.5em; /* Slightly more padding on larger screens */
+	}
+
+	.nav-link {
+		font-size: 1.5rem; /* Larger font size for better readability */
+		padding: 0.6em 1.2em; /* Slightly larger padding */
+	}
+
+	.nav-divider {
+		font-size: 1.5rem; /* Match nav-link size */
+	}
+	.conversation {
+		min-height: 40vh;
+		max-height: 70vh;
+	}
+}
+
+@media (min-width: 1080px) {
+	.nav-link {
+		font-size: 1.75rem; /* Even larger for desktop */
+		padding: 0.7em 1.5em;
+	}
+
+	.nav-divider {
+		font-size: 1.75rem;
+	}
+}
