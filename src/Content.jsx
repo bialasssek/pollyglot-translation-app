@@ -44,13 +44,10 @@ export default function Content() {
 				<form action={handleSubmit} className="translate-form">
 					{isTranslated ? (
 						<>
-							<label htmlFor="translateInput" className="translate-header">
-								Text to translate 👇
-							</label>
+							<label className="translate-header">Text to translate 👇</label>
 							<input
 								type="text"
 								name="translateText"
-								id="translateText"
 								defaultValue={toBeTranslatedText}
 								className="translate-input"
 							/>
@@ -66,13 +63,10 @@ export default function Content() {
 						</>
 					) : (
 						<>
-							<label htmlFor="translateInput" className="translate-header">
-								Text to translate 👇
-							</label>
+							<label className="translate-header">Text to translate 👇</label>
 							<input
 								type="text"
 								name="translateText"
-								id="translateText"
 								placeholder="How are you?"
 								className="translate-input"
 								required
@@ -89,7 +83,7 @@ export default function Content() {
 									type="radio"
 									name="language"
 									value="french"
-									id="radioInput"
+									className="radioInput"
 									required
 								/>
 								<p>French</p>
@@ -101,7 +95,7 @@ export default function Content() {
 									type="radio"
 									name="language"
 									value="spanish"
-									id="radioInput"
+									className="radioInput"
 									required
 								/>
 								<p>Spanish</p>
@@ -113,7 +107,7 @@ export default function Content() {
 									type="radio"
 									name="language"
 									value="japanese"
-									id="radioInput"
+									className="radioInput"
 									required
 								/>
 								<p>Japanese</p>
