@@ -16,7 +16,7 @@ export default function Content() {
 			return;
 		}
 
-		fetch("/.netlify/functions/getRecipe", {
+		fetch("/.netlify/functions/translate", {
 			method: "POST",
 			headers: {
 				"Content-Type": "application/json",
@@ -94,7 +94,7 @@ export default function Content() {
 									required
 								/>
 								<p>French</p>
-								<img src="../public/fr-flag.svg" alt="french flag" />
+								<img src="/fr-flag.svg" alt="french flag" />
 							</label>
 
 							<label htmlFor="radioInput" className="label-language">
@@ -106,7 +106,7 @@ export default function Content() {
 									required
 								/>
 								<p>Spanish</p>
-								<img src="../public/sp-flag.svg" alt="spanish flag" />
+								<img src="/sp-flag.svg" alt="spanish flag" />
 							</label>
 
 							<label htmlFor="radioInput" className="label-language">
@@ -118,7 +118,7 @@ export default function Content() {
 									required
 								/>
 								<p>Japanese</p>
-								<img src="../public/jpn-flag.svg" alt="japanese flag" />
+								<img src="/jpn-flag.svg" alt="japanese flag" />
 							</label>
 						</>
 					)}
