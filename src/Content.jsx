@@ -31,7 +31,6 @@ export default function Content() {
 				console.log(
 					`Translate the following text into ${selectedLang}: ${inputText}`
 				);
-				console.log(data.choices[0].message.content);
 
 				setTranslatedText(data.translatedText);
 				setIsTranslated(true);
